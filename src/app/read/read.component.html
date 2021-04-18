@@ -1,0 +1,12 @@
+<div class="right" *ngIf="tutorials">
+
+  <h3>Tutorials</h3>
+  <ul>
+    <li *ngFor="let tutorial of tutorials | async; let i = index">
+      <a [href]="tutorial.url" target="_blank">{{ tutorial.name }}</a>
+      <button class="btn btn-danger mx-3" (click)="delTutorial(i)">Delete</button>
+    </li>
+
+  </ul>
+
+</div>
